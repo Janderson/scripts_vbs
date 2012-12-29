@@ -1,0 +1,15 @@
+UL#nav LI UL.submenu {
+	WIDTH: 23em
+}
+UL#nav LI UL.zh {
+	WIDTH: 18em
+}
+UL#nav LI UL.jp {
+	WIDTH: 24em
+}
+UL#nav LI UL.pl {
+	WIDTH: 25em
+}
+UL#nav LI UL.ru {
+	WIDTH: 25em
+}

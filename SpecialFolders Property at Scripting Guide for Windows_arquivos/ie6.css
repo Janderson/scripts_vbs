@@ -1,0 +1,12 @@
+UL#nav LI {
+	WIDTH: 1px
+}
+UL#nav UL.submenu LI {
+	WIDTH: 100%
+}
+UL#nav A:link {
+	WIDTH: 100%
+}
+UL#nav A:visited {
+	WIDTH: 100%
+}

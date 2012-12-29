@@ -1,0 +1,878 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0065)http://www.pctools.com/guides/scripting/detail/139/?act=reference -->
+<HTML><HEAD><TITLE>SpecialFolders Property at Scripting Guide for Windows</TITLE>
+<META http-equiv=content-type content=text/html;charset=UTF-8>
+<META 
+content="Provides access to a collection containing the locations of the Windows special folders, such as My Documents, Favorites and the Start Menu." 
+name=description>
+<META 
+content="windows scripting, window, script, wscript, java script, vb script, windows scripting host, wsh, programming, programmer, visual basic, jscript, vbscript, perlscript, wshshell, vb, vba, batch, logon, login, sample, example, popup, pop up, javascript, file, shell, language, engine, tutorials, faq, reference, source code, coding, runtime, compiler, decompiler, asp, active server pages, page, web, site, project, control, component, database, sql, api, activex, com, com+, ado, dao, support, automate, macro, automation, virus, code, error, python, perl, php, 98, nt, 2000, xp, 95, ce, me, millennium, edition, 2k, winme, win2k, win32, microsoft, ms, tips, tricks, tweaks, hacks" 
+name=keywords><LINK media="screen, projection" 
+href="SpecialFolders Property at Scripting Guide for Windows_arquivos/pctools.css" 
+type=text/css rel=stylesheet><LINK media="screen, projection" 
+href="SpecialFolders Property at Scripting Guide for Windows_arquivos/menu.css" 
+type=text/css rel=stylesheet><!--[if IE]><LINK media="screen, projection" 
+href="SpecialFolders Property at Scripting Guide for Windows_arquivos/ie7.css" 
+type=text/css rel=stylesheet><![endif]--><!--[if lt IE 7]><LINK 
+media="screen, projection" 
+href="SpecialFolders Property at Scripting Guide for Windows_arquivos/ie6.css" 
+type=text/css rel=stylesheet><![endif]-->
+<SCRIPT 
+src="SpecialFolders Property at Scripting Guide for Windows_arquivos/pctools.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var uri = new Object();
+getURL(uri);
+var up = uri.path;
+up = up.replace(/[/]*$/g,'');
+if(up.search(/^\//) < 0) { up='/'+up;}
+if(up.search(/\/$/) < 0) { up=up+"/";}
+
+var pageTracker = _gat._getTracker("UA-1490218-1");
+if(getRef() != "") { pageTracker._setCampNameKey("ref");}
+if(getParam('utm_campaign') != "") { pageTracker._setCampNameKey("utm_campaign");}
+pageTracker._setDomainName("pctools.com");
+pageTracker._initData();
+pageTracker._trackPageview(up);
+</SCRIPT>
+
+<SCRIPT 
+src="SpecialFolders Property at Scripting Guide for Windows_arquivos/authenticate.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT 
+src="SpecialFolders Property at Scripting Guide for Windows_arquivos/mbox.js" 
+type=text/javascript></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2873" name=GENERATOR></HEAD>
+<BODY id=pctoolsbody><!-- Array
+(
+    [sysname] => Linux
+    [nodename] => www4.pctools.com
+    [release] => 2.6.18-53.1.13.el5
+    [version] => #1 SMP Mon Feb 11 13:27:27 EST 2008
+    [machine] => x86_64
+)
+ -->
+<DIV id=ps></DIV><!--<script language="JavaScript" src="/res/js/apd.js"></script>-->
+<SCRIPT 
+type=text/javascript>
+	var authenticated = 0;
+	var pr_auth = 0;
+</SCRIPT>
+
+<CENTER><!--<script language="JavaScript" src="/res/js/menu.js"></script>-->
+<TABLE id=main cellSpacing=0 cellPadding=0>
+  <TBODY>
+  <TR>
+    <TD width=5><IMG alt="" 
+      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD>
+    <TD style="BACKGROUND: url(/res/images/c2_bg.gif) repeat-x 0px 0px">
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD><IMG alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/c2.gif"></TD>
+          <TD align=right><IMG alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/c2_1.gif"></TD></TR></TBODY></TABLE></TD>
+    <TD width=5><IMG alt="" 
+      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD></TR>
+  <TR>
+    <TD style="BACKGROUND: url(/res/images/c1_bg.gif) repeat-y 0px 0px" 
+    vAlign=top align=left><IMG alt="" 
+      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/c1.gif"></TD>
+    <TD vAlign=top bgColor=white><!-- site start-->
+      <SCRIPT type=text/javascript>
+function select_language() {
+	change_to = document.getElementById('lang').value;
+	if(change_to != "") {
+		document.location.href=change_to;
+	}
+}
+</SCRIPT>
+
+      <TABLE style="BACKGROUND: url(/res/images/s2.gif) no-repeat right top" 
+      cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width=7 height=91 rowSpan=2><IMG height=91 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/s1.gif" 
+            width=7 border=0></TD>
+          <TD style="BACKGROUND: url(/res/images/bg_head.gif) repeat-x left top" 
+          align=left rowSpan=2><A href="http://www.pctools.com/"><IMG 
+            alt="PC Tools - Essential tools for your PC" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/logo.png"></A></TD>
+          <TD style="TEXT-ALIGN: center"></TD></TR>
+        <TR>
+          <TD align=right width=233>
+            <FORM style="MARGIN: 0px" action=/guides/scripting/detail/139/ 
+            method=post><IMG height=33 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif" 
+            width=16 border=0> </FORM></TD></TR></TBODY></TABLE>
+      <TABLE style="WIDTH: 100%" cellSpacing=0 cellPadding=0>
+        <TBODY>
+        <TR>
+          <TD 
+          style="BACKGROUND: url(/res/images/bg_menu.gif) repeat-x 0px 0px; WIDTH: 7px; TEXT-ALIGN: left"><IMG 
+            alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/m1.gif"></TD>
+          <TD style="BACKGROUND: url(/res/images/bg_menu.gif) repeat-x 0px 0px"><!-- menu start-->
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width=8><IMG height=26 alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/m2.gif" 
+                  width=8 border=0></TD>
+                <TD 
+                style="BACKGROUND: url(/res/images/bg_menu1.gif) repeat-x 0px 0px" 
+                width=4><IMG height=1 alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif" 
+                  width=1 border=0></TD>
+                <TD 
+                style="BACKGROUND: url(/res/images/bg_menu1.gif) repeat-x 0px 0px" 
+                align=left>
+                  <UL id=nav>
+                    <LI><A href="http://www.pctools.com/guides/">Guides</A> 
+                    <UL class="submenu en">
+                      <LI><A 
+                      href="http://www.pctools.com/guides/registry/">Registry 
+                      Guide</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/guides/security/">Security 
+                      Guide</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/guides/software/">Software 
+                      Guide</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/guides/scripting/">Scripting 
+                      Guide</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/guides/drivers/">Driver 
+                      Guide</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/guides/search/">Search</A> 
+                      </LI></UL></LI>
+                    <LI><A 
+                    href="http://www.pctools.com/consumer/products/">Products</A> 
+
+                    <UL class="submenu en">
+                      <LI><SPAN>Security Products</SPAN> </LI>
+                      <LI class=separator><A 
+                      href="http://www.pctools.com/spyware-doctor/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/spyware-doctor_16x16.png" 
+                      width=16> Spyware Doctor</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/spyware-doctor-antivirus/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/spyware-doctor-antivirus_16x16.png" 
+                      width=16> Spyware Doctor with AntiVirus</A> </LI>
+                      <LI><A href="http://www.pctools.com/free-antivirus/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/anti-virus_16x16.png" 
+                      width=16> PC Tools AntiVirus</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/internet-security/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/internet-security_16x16.png" 
+                      width=16> PC Tools Internet Security</A> </LI>
+                      <LI><A href="http://www.pctools.com/firewall/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/firewall_16x16.png" 
+                      width=16> PC Tools Firewall Plus</A> </LI>
+                      <LI><A href="http://www.threatfire.com/"><IMG height=16 
+                      alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/threatfire_16x16.png" 
+                      width=16> ThreatFire</A> </LI>
+                      <LI><A href="http://www.pctools.com/spam-monitor/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/spam-monitor_16x16.png" 
+                      width=16> Spam Monitor</A> </LI>
+                      <LI><A href="http://www.iantivirus.com/"><IMG height=16 
+                      alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/iantivirus_16x16.png" 
+                      width=16> iAntiVirus for Mac OS X</A> </LI>
+                      <LI class=spacer> </LI>
+                      <LI><SPAN>Utility Products</SPAN> </LI>
+                      <LI class=separator><A 
+                      href="http://www.pctools.com/registry-mechanic/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/registry-mechanic_16x16.png" 
+                      width=16> Registry Mechanic</A> </LI>
+                      <LI><A href="http://www.pctools.com/desktop-maestro/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/desktop-maestro_16x16.png" 
+                      width=16> Desktop Maestro</A> </LI>
+                      <LI><A href="http://www.pctools.com/file-recover/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/file-recover_16x16.png" 
+                      width=16> File Recover</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/privacy-guardian/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/privacy-guardian_16x16.png" 
+                      width=16> Privacy Guardian</A> </LI>
+                      <LI><A href="http://www.pctools.com/disk-suite/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/disk-suite_16x16.png" 
+                      width=16> PC Tools Disk Suite</A> </LI>
+                      <LI class=spacer> </LI>
+                      <LI><SPAN>Business Solutions</SPAN> </LI>
+                      <LI class=separator><A 
+                      href="http://www.pctools.com/spyware-doctor-enterprise/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/spyware-doctor-enterprise_16x16.png" 
+                      width=16> Spyware Doctor Enterprise</A> </LI>
+                      <LI class=spacer> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/product-recommender/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/product-recommender_16x16.png" 
+                      width=16> Help me choose</A> </LI></UL></LI>
+                    <LI><A 
+                    href="http://www.pctools.com/product/download/">Download</A> 
+
+                    <UL class="submenu en">
+                      <LI><SPAN>Security Products</SPAN> </LI>
+                      <LI class=separator><A 
+                      href="http://www.pctools.com/spyware-doctor/download/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/spyware-doctor_16x16.png" 
+                      width=16> Spyware Doctor</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/spyware-doctor-antivirus/download/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/spyware-doctor-antivirus_16x16.png" 
+                      width=16> Spyware Doctor with AntiVirus</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/free-antivirus/download/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/anti-virus_16x16.png" 
+                      width=16> PC Tools AntiVirus</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/internet-security/download/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/internet-security_16x16.png" 
+                      width=16> PC Tools Internet Security</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/firewall/download/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/firewall_16x16.png" 
+                      width=16> PC Tools Firewall Plus</A> </LI>
+                      <LI><A href="http://www.threatfire.com/download/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/threatfire_16x16.png" 
+                      width=16> ThreatFire</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/spam-monitor/download/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/spam-monitor_16x16.png" 
+                      width=16> Spam Monitor</A> </LI>
+                      <LI><A href="http://www.iantivirus.com/download/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/iantivirus_16x16.png" 
+                      width=16> iAntiVirus for Mac OS X</A> </LI>
+                      <LI class=spacer> </LI>
+                      <LI><SPAN>Utility Products</SPAN> </LI>
+                      <LI class=separator><A 
+                      href="http://www.pctools.com/registry-mechanic/download/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/registry-mechanic_16x16.png" 
+                      width=16> Registry Mechanic</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/desktop-maestro/download/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/desktop-maestro_16x16.png" 
+                      width=16> Desktop Maestro</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/file-recover/download/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/file-recover_16x16.png" 
+                      width=16> File Recover</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/privacy-guardian/download/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/privacy-guardian_16x16.png" 
+                      width=16> Privacy Guardian</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/disk-suite/download/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/disk-suite_16x16.png" 
+                      width=16> PC Tools Disk Suite</A> </LI>
+                      <LI class=spacer> </LI>
+                      <LI><SPAN>Business Solutions</SPAN> </LI>
+                      <LI class=separator><A 
+                      href="http://www.pctools.com/spyware-doctor-enterprise/download/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/spyware-doctor-enterprise_16x16.png" 
+                      width=16> Spyware Doctor Enterprise</A> </LI>
+                      <LI class=spacer> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/product-recommender/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/product-recommender_16x16.png" 
+                      width=16> Help me choose</A> </LI></UL></LI>
+                    <LI><A 
+                    href="http://www.pctools.com/product/purchase/">Purchase</A> 
+
+                    <UL class="submenu en">
+                      <LI><SPAN>Security Products</SPAN> </LI>
+                      <LI class=separator><A 
+                      href="http://www.pctools.com/spyware-doctor/purchase/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/spyware-doctor_16x16.png" 
+                      width=16> Spyware Doctor</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/spyware-doctor-antivirus/purchase/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/spyware-doctor-antivirus_16x16.png" 
+                      width=16> Spyware Doctor with AntiVirus</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/antivirus/purchase/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/anti-virus_16x16.png" 
+                      width=16> PC Tools AntiVirus</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/internet-security/purchase/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/internet-security_16x16.png" 
+                      width=16> PC Tools Internet Security</A> </LI>
+                      <LI><A href="http://www.threatfire.com/purchase/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/threatfire_16x16.png" 
+                      width=16> ThreatFire</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/spam-monitor/purchase/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/spam-monitor_16x16.png" 
+                      width=16> Spam Monitor</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/iantivirus/purchase/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/iantivirus_16x16.png" 
+                      width=16> iAntiVirus for Mac OS X</A> </LI>
+                      <LI class=spacer> </LI>
+                      <LI><SPAN>Utility Products</SPAN> </LI>
+                      <LI class=separator><A 
+                      href="http://www.pctools.com/registry-mechanic/purchase/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/registry-mechanic_16x16.png" 
+                      width=16> Registry Mechanic</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/desktop-maestro/purchase/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/desktop-maestro_16x16.png" 
+                      width=16> Desktop Maestro</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/file-recover/purchase/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/file-recover_16x16.png" 
+                      width=16> File Recover</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/privacy-guardian/purchase/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/privacy-guardian_16x16.png" 
+                      width=16> Privacy Guardian</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/disk-suite/purchase/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/disk-suite_16x16.png" 
+                      width=16> PC Tools Disk Suite</A> </LI>
+                      <LI class=spacer> </LI>
+                      <LI class=separator> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/product-recommender/"><IMG 
+                      height=16 alt="" 
+                      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/product-recommender_16x16.png" 
+                      width=16> Help me choose</A> </LI></UL></LI>
+                    <LI><A 
+                    href="http://www.pctools.com/contact/support/">Support</A> 
+                    <UL class="submenu en">
+                      <LI><A 
+                      href="http://www.pctools.com/contact/support/">Online 
+                      Support</A> </LI>
+                      <LI><A href="http://www.pctools.com/lostcode/">Lost 
+                      Code</A> </LI></UL></LI>
+                    <LI><A href="http://www.pctools.com/company/">Company</A> 
+                    <UL class="submenu en">
+                      <LI><A 
+                      href="http://www.pctools.com/company/awards/">Awards</A> 
+                      </LI>
+                      <LI><A href="http://www.pctools.com/careers/">Careers</A> 
+                      </LI>
+                      <LI><A href="http://www.pctools.com/forum/">Community 
+                      Forum</A> </LI>
+                      <LI><A href="http://www.pctools.com/contact/">Contact</A> 
+                      </LI>
+                      <LI><A href="http://www.pctools.com/labs/">Labs</A> </LI>
+                      <LI><A href="http://www.pctools.com/news/">News</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/partners/">Partners</A> </LI>
+                      <LI><A href="http://www.pctools.com/press-room/">Press 
+                      Room</A> </LI>
+                      <LI><A 
+                      href="http://www.pctools.com/industry_news/">Industry 
+                      News</A> </LI></UL></LI></UL></TD>
+                <TD id=wizkid 
+                style="BACKGROUND: url(/res/images/bg_menu1.gif) repeat-x 0px 0px; TEXT-ALIGN: right"><IMG 
+                  height=1 alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif" 
+                  width=1 border=0>
+                  <SCRIPT type=text/javascript>
+function toggle_searchbox() {
+	if (document.getElementById) {
+		var theBox = document.getElementById("searchbox");
+		theBox.style.display = theBox.style.display == "none" ? "block" : "none";
+	}
+}
+</SCRIPT>
+                   <SPAN id=nav_questions><A 
+                  style="FONT-WEIGHT: bold; COLOR: white" 
+                  onclick="toggle_searchbox(); return false;" 
+                  href="http://www.pctools.com/guides/search/">Search <IMG 
+                  style="VERTICAL-ALIGN: middle" alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/white_arrow_down.png"></A></SPAN> 
+
+                  <DIV style="POSITION: relative; TEXT-ALIGN: left">
+                  <DIV id=searchbox 
+                  style="BORDER-RIGHT: black 1px solid; BORDER-TOP: black 1px solid; DISPLAY: none; Z-INDEX: 15; RIGHT: -8px; BORDER-LEFT: black 1px solid; WIDTH: 225px; BORDER-BOTTOM: black 1px solid; POSITION: absolute; TOP: 6px; BACKGROUND-COLOR: rgb(25,117,209)">
+                  <H2 
+                  style="BORDER-RIGHT: white 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: white 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; MARGIN: 0pt; BORDER-LEFT: white 1px solid; COLOR: white; PADDING-TOP: 3px; BORDER-BOTTOM: white 1px solid">Search 
+                  Guides</H2>
+                  <FORM 
+                  style="BORDER-RIGHT: white 1px solid; PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; MARGIN: 0pt; BORDER-LEFT: white 1px solid; PADDING-TOP: 3px; BACKGROUND-COLOR: rgb(196,196,204)" 
+                  action=/guides/search/ method=get><INPUT name=query><INPUT class=button type=submit value=Search name=submit_query></FORM>
+                  <DIV 
+                  style="BORDER-RIGHT: white 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: white 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; BORDER-LEFT: white 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: white 1px solid; BACKGROUND-COLOR: rgb(196,196,204)"><A 
+                  href="http://www.pctools.com/guides/search/">Advanced 
+                  Search</A></DIV></DIV></DIV></TD>
+                <TD width=8><IMG height=26 alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/m3.gif" 
+                  width=8 border=0></TD></TR></TBODY></TABLE><!--[if lte IE 6]>
+            <SCRIPT 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/supersleight.js" 
+            type=text/javascript></SCRIPT>
+<![endif]-->
+            <SCRIPT type=text/javascript>
+	function startList() {
+		if (document.getElementById) {
+			navRoot = document.getElementById('nav');
+			for (i=0; i<navRoot.childNodes.length; i++) {
+				node = navRoot.childNodes[i];
+				if (node.nodeName.toUpperCase()=='LI') {
+					node.onmouseover=function() {
+						this.className='over';
+					}
+					node.onmouseout=function() {
+						this.className='';
+					}
+				}
+			}
+		}
+	}
+	startList();
+</SCRIPT>
+<!-- menu end--></TD>
+          <TD 
+          style="BACKGROUND: url(/res/images/bg_menu.gif) repeat-x 0px 0px; WIDTH: 7px; TEXT-ALIGN: right"><IMG 
+            alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/m1.gif"></TD></TR>
+        <TR>
+          <TD><IMG alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD>
+          <TD>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width=3><IMG alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/mt1.gif"></TD>
+                <TD 
+                style="BACKGROUND: url(/res/images/bg_mt.gif) repeat-x 0px 0px"><IMG 
+                  alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD>
+                <TD width=3><IMG alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/mt2.gif"></TD></TR></TBODY></TABLE></TD>
+          <TD><IMG alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD></TR></TBODY></TABLE><!-- menu end-->
+      <DIV id=spacer></DIV><!-- subhead start--><!-- subhead end-->
+      <DIV id=spacer></DIV>
+      <DIV style="MARGIN: 5px 0px 20px">
+      <DIV style="TEXT-ALIGN: center"><IFRAME id=a8752178 name=a8752178 
+      frameSpacing=0 
+      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/afr.htm" 
+      frameBorder=no width=728 scrolling=no 
+      height=90>
+ <a href='http://adserver.pctools.com/www/delivery/ck.php?n=aadbdbba' target='_blank'><img src='http://adserver.pctools.com/www/delivery/avw.php?zoneid=3&amp;n=aadbdbba' border='0' alt=''></a>
+</IFRAME></DIV></DIV>
+      <TABLE style="OVERFLOW: hidden; HEIGHT: 246px" cellSpacing=0 cellPadding=0 
+      width="100%">
+        <TBODY>
+        <TR vAlign=top>
+          <TD width=7><IMG alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD>
+          <TD width=155>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#f3f3f3>
+              <TBODY>
+              <TR>
+                <TD width=4><IMG alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/cont_r_1.gif"></TD>
+                <TD 
+                style="BACKGROUND: url(/res/images/bg_cont_4_1.gif) repeat-x 0px 0px"><IMG 
+                  alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD>
+                <TD width=4><IMG alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/cont_r_2.gif"></TD></TR>
+              <TR>
+                <TD 
+                style="BACKGROUND: url(/res/images/bg_cont_r_4.gif) repeat-y 0px 0px"><IMG 
+                  alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD>
+                <TD>
+                  <DIV class=header>Features</DIV>
+                  <DIV class=sidebox_content>
+                  <UL 
+                  style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-POSITION: inside; LIST-STYLE-IMAGE: url(/res/images/arrow3.gif); PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left">
+                    <LI 
+                    style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.2em; PADDING-TOP: 0.2em"><A 
+                    href="http://www.pctools.com/guides/registry/">Registry 
+                    Guide</A> 
+                    <LI 
+                    style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.2em; PADDING-TOP: 0.2em"><A 
+                    href="http://www.pctools.com/guides/security/">Security 
+                    Guide</A> 
+                    <LI 
+                    style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.2em; PADDING-TOP: 0.2em"><A 
+                    href="http://www.pctools.com/guides/software/">Software 
+                    Guide</A> 
+                    <LI 
+                    style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.2em; PADDING-TOP: 0.2em"><A 
+                    href="http://www.pctools.com/guides/drivers/">Driver 
+                    Guide</A></LI></UL>
+                  <HR>
+
+                  <UL 
+                  style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-POSITION: inside; LIST-STYLE-IMAGE: url(/res/images/arrow3.gif); PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left">
+                    <LI 
+                    style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.2em; PADDING-TOP: 0.2em"><A 
+                    href="http://www.pctools.com/forum/">Support Forums</A> 
+                    <LI 
+                    style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.2em; PADDING-TOP: 0.2em"><A 
+                    href="http://www.pctools.com/newsletter/">Newsletters</A> 
+                    </LI></UL>
+                  <UL 
+                  style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-POSITION: inside; LIST-STYLE-IMAGE: url(/res/images/arrow3.gif); PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left">
+                    <LI 
+                    style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.2em; PADDING-TOP: 0.2em"><A 
+                    href="http://www.pctools.com/guides/article/id/2/">Scripting 
+                    Article</A> 
+                    <LI 
+                    style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.2em; PADDING-TOP: 0.2em"><A 
+                    href="http://www.pctools.com/guides/software/">Downloads</A> 
+
+                    <LI 
+                    style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.2em; PADDING-TOP: 0.2em"><A 
+                    href="http://www.pctools.com/guides/dictionary/">Dictionary</A> 
+                    </LI></UL>
+                  <HR>
+
+                  <UL 
+                  style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-POSITION: inside; LIST-STYLE-IMAGE: url(/res/images/arrow3.gif); PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: left">
+                    <LI 
+                    style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.2em; PADDING-TOP: 0.2em"><A 
+                    href="http://www.pctools.com/tweak-manager/">Tweak 
+                    Manager</A> 
+                    <LI 
+                    style="PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.2em; PADDING-TOP: 0.2em"><A 
+                    href="http://www.pctools.com/registry-mechanic/">Registry 
+                    Mechanic</A></LI></UL></DIV></TD>
+                <TD 
+                style="BACKGROUND: url(/res/images/bg_cont_r_2.gif) repeat-y 0px 0px"><IMG 
+                  alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD></TR>
+              <TR>
+                <TD><IMG alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/cont_r_4.gif"></TD>
+                <TD 
+                style="BACKGROUND: url(/res/images/bg_cont_r_3.gif) repeat-x 0px 0px"><IMG 
+                  alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD>
+                <TD><IMG alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/cont_r_3.gif"></TD></TR></TBODY></TABLE>
+            <DIV id=spacer></DIV>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#f3f3f3>
+              <TBODY>
+              <TR>
+                <TD width=4><IMG alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/cont_r_1.gif"></TD>
+                <TD 
+                style="BACKGROUND: url(/res/images/bg_cont_4_1.gif) repeat-x 0px 0px"><IMG 
+                  alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD>
+                <TD width=4><IMG alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/cont_r_2.gif"></TD></TR>
+              <TR>
+                <TD 
+                style="BACKGROUND: url(/res/images/bg_cont_r_4.gif) repeat-y 0px 0px"><IMG 
+                  alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD>
+                <TD>
+                  <DIV class=header></DIV>
+                  <DIV class=sidebox_content>
+                  <SCRIPT type=text/javascript> document.write('<img src="/res/images/guides/icons/printer_small.gif" alt="" height="16" width="16">&nbsp;<a href="javascript:window.print();">Print this</a><br><img src="/res/images/guides/icons/email_small.gif" alt="" height="16" width="16">&nbsp;<a href="mailto:?subject=PC%20Guides%20for%20Windows&reg;%20Article&body=http://www.pctools.com/guides/scripting/detail/139/">E-mail this</a><br><img src="/res/images/guides/icons/favorites_small.gif" alt="" height="16" width="16">&nbsp;<a href="javascript:window.external.AddFavorite(\'http://www.pctools.com/guides/scripting/detail/139/\', document.title)">Bookmark</a>'); </SCRIPT>
+                  </DIV></TD>
+                <TD 
+                style="BACKGROUND: url(/res/images/bg_cont_r_2.gif) repeat-y 0px 0px"><IMG 
+                  alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD></TR>
+              <TR>
+                <TD><IMG alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/cont_r_4.gif"></TD>
+                <TD 
+                style="BACKGROUND: url(/res/images/bg_cont_r_3.gif) repeat-x 0px 0px"><IMG 
+                  alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD>
+                <TD><IMG alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/cont_r_3.gif"></TD></TR></TBODY></TABLE>
+            <DIV id=spacer></DIV>
+            <TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#f3f3f3>
+              <TBODY>
+              <TR>
+                <TD width=4><IMG alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/cont_r_1.gif"></TD>
+                <TD 
+                style="BACKGROUND: url(/res/images/bg_cont_4_1.gif) repeat-x 0px 0px"><IMG 
+                  alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD>
+                <TD width=4><IMG alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/cont_r_2.gif"></TD></TR>
+              <TR>
+                <TD 
+                style="BACKGROUND: url(/res/images/bg_cont_r_4.gif) repeat-y 0px 0px"><IMG 
+                  alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD>
+                <TD>
+                  <DIV class=header>Newsletter</DIV>
+                  <DIV class=sidebox_content>
+                  <DIV class=center style="MARGIN: 0px">Receive regular Windows® 
+                  updates
+                  <FORM action=http://www.pctools.com/newsletter/subscribe/ 
+                  method=post><INPUT style="WIDTH: 90%" name=email> <INPUT class=button type=submit value="Join Now!" name=submit> 
+                  <INPUT type=hidden value=1 name=submitted> <INPUT type=hidden 
+                  value=pctools name=product> </FORM>Your privacy is ensured by 
+                  our <A 
+                  href="http://www.pctools.com/info/privacypolicy/">privacy 
+                  policy</A></DIV></DIV></TD>
+                <TD 
+                style="BACKGROUND: url(/res/images/bg_cont_r_2.gif) repeat-y 0px 0px"><IMG 
+                  alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD></TR>
+              <TR>
+                <TD><IMG alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/cont_r_4.gif"></TD>
+                <TD 
+                style="BACKGROUND: url(/res/images/bg_cont_r_3.gif) repeat-x 0px 0px"><IMG 
+                  alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD>
+                <TD><IMG alt="" 
+                  src="SpecialFolders Property at Scripting Guide for Windows_arquivos/cont_r_3.gif"></TD></TR></TBODY></TABLE>
+            <DIV id=spacer></DIV></TD><!-- content border start-->
+          <TD>
+            <DIV id=main_content 
+            style="PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0px; PADDING-TOP: 0px" 
+            align=left><A 
+            href="http://www.pctools.com/guides/scripting/">Scripting Home</A> 
+            &gt; <A 
+            href="http://www.pctools.com/guides/scripting/id/3/?act=reference"></A>&gt; 
+            <A 
+            href="http://www.pctools.com/guides/scripting/id/31/?act=reference">WScript 
+            Properties</A> 
+            <DIV style="MARGIN-TOP: 10px; MARGIN-LEFT: 5px">
+            <P><B>SpecialFolders Property</B></P>
+            <H3>Description</H3>
+            <P>Provides access to a collection containing the locations of the 
+            Windows special folders, such as My Documents, Favorites and the 
+            Start Menu.</P>
+            <P><I>object</I>.<B>SpecialFolders</B>(<I>SpecialFolder</I>) 
+            <P>The <I>SpecialFolder</I> parameter is a string that specifies 
+            which special folder to access. The available list of folders 
+            includes: 
+            <P>AllUsersDesktop<BR>AllUsersStartMenu<BR>AllUsersPrograms<BR>AllUsersStartup<BR>Desktop<BR>Favorites<BR>Fonts<BR>MyDocuments<BR>NetHood<BR>PrintHood<BR>Programs<BR>Recent<BR>SendTo<BR>StartMenu<BR>Startup<BR>Templates<BR></P>
+            <H3>Example</H3><PRE class=code><FONT color=#007f00>'VBScript Example<BR></FONT><FONT color=#00007f>Set</FONT> WshShell = <FONT color=#00007f>WScript</FONT>.<FONT color=#00007f>CreateObject</FONT>("WScript.Shell")<BR><FONT color=#00007f>WScript</FONT>.Echo WshShell.SpecialFolders("Desktop")</PRE></DIV></DIV><!-- content border end--></TD>
+          <TD width=7><IMG alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD></TR></TBODY></TABLE>
+      <TABLE style="CLEAR: both; MARGIN-TOP: 2em" cellSpacing=0 cellPadding=0 
+      width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width=7><IMG height=1 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif" 
+            width=1 border=0></TD>
+          <TD width=4><IMG height=24 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/bottom_menu_guides_c1.png" 
+            width=4 border=0></TD>
+          <TD width=4 bgColor=#cccccc><IMG height=1 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif" 
+            width=1 border=0></TD>
+          <TD class=menu noWrap bgColor=#cccccc>More Guides »</TD>
+          <TD class=menu noWrap bgColor=#cccccc><A 
+            href="http://www.pctools.com/guides/registry/">Registry Guide</A></TD>
+          <TD class=menu noWrap bgColor=#cccccc><A 
+            href="http://www.pctools.com/guides/security/">Security Guide</A></TD>
+          <TD class=menu noWrap bgColor=#cccccc><A 
+            href="http://www.pctools.com/forum/">Support Forums</A></TD>
+          <TD class=menu noWrap bgColor=#cccccc><A 
+            href="http://www.pctools.com/guides/software/">Software Guide</A></TD>
+          <TD class=menu noWrap bgColor=#cccccc><A 
+            href="http://www.pctools.com/guides/drivers/">Driver Guide</A></TD>
+          <TD class=menu noWrap bgColor=#cccccc><A 
+            href="http://www.pctools.com/guides/search/">Search</A></TD>
+          <TD align=right bgColor=#cccccc><IMG height=24 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/bottom_menu_guides_c2.png" 
+            width=4 border=0></TD>
+          <TD align=right width=7><IMG height=1 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif" 
+            width=1 border=0></TD></TR></TBODY></TABLE>
+      <DIV id=spacer></DIV><!-- bottom menu start -->
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width=7><IMG height=1 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif" 
+            width=1></TD>
+          <TD width=4><IMG height=24 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/bottom_menu_c1.gif" 
+            width=4></TD>
+          <TD width=4 bgColor=#ababb1><IMG height=1 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif" 
+            width=1></TD>
+          <TD class=menu noWrap bgColor=#ababb1><A 
+            href="http://www.pctools.com/">Home</A></TD>
+          <TD class=menu noWrap bgColor=#ababb1><A 
+            href="http://www.pctools.com/product/download/">Download</A></TD>
+          <TD class=menu noWrap bgColor=#ababb1><A 
+            href="http://www.pctools.com/product/purchase/">Purchase</A></TD>
+          <TD class=menu noWrap bgColor=#ababb1><A 
+            href="http://www.pctools.com/contact/support/">Support</A></TD>
+          <TD class=menu noWrap bgColor=#ababb1><A 
+            href="http://www.pctools.com/partners/">Partners</A></TD>
+          <TD class=menu noWrap bgColor=#ababb1><A 
+            href="http://www.pctools.com/company/">Company</A></TD>
+          <TD class=menu noWrap bgColor=#ababb1><A 
+            href="http://www.pctools.com/contact/">Contact</A></TD>
+          <TD align=right bgColor=#ababb1><IMG height=24 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/bottom_menu_c2.gif" 
+            width=4></TD>
+          <TD align=right width=7><IMG height=1 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif" 
+            width=1></TD></TR></TBODY></TABLE><!-- bottom menu end -->
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD height=3><IMG height=1 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif" 
+            width=1></TD></TR></TBODY></TABLE>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width=4><IMG height=4 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/s4.gif" 
+            width=4></TD>
+          <TD><IMG height=1 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif" 
+            width=1></TD>
+          <TD align=right width=4><IMG height=4 alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/s3.gif" 
+            width=4></TD></TR></TBODY></TABLE><!-- site end--></TD>
+    <TD style="BACKGROUND: url(/res/images/c3_bg.gif) repeat-y 0px 0px" 
+    vAlign=top align=left><IMG alt="" 
+      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/c3.gif"></TD></TR>
+  <TR>
+    <TD width=5><IMG alt="" 
+      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD>
+    <TD style="BACKGROUND: url(/res/images/c4_bg.gif) repeat-x 0px 0px">
+      <TABLE cellSpacing=0 cellPadding=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD><IMG alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/c4.gif"></TD>
+          <TD align=right><IMG alt="" 
+            src="SpecialFolders Property at Scripting Guide for Windows_arquivos/c4_1.gif"></TD></TR></TBODY></TABLE></TD>
+    <TD width=5><IMG alt="" 
+      src="SpecialFolders Property at Scripting Guide for Windows_arquivos/p.gif"></TD></TR>
+  <TR vAlign=bottom>
+    <TD colSpan=3>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD width=250>&nbsp;</TD>
+          <TD class=copy align=middle>Copyright © 1998-2009 PC Tools. All 
+            rights Reserved.</TD>
+          <TD class=copy align=right width=250><A 
+            href="http://www.pctools.com/info/privacypolicy/"><FONT 
+            color=white>Privacy Policy</FONT></A> | <A 
+            href="http://www.pctools.com/info/legalnotice/"><FONT 
+            color=white>Legal 
+  Notice</FONT></A>&nbsp;</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR><BR></CENTER><NOSCRIPT>
+<CENTER><A style="COLOR: #ffffff" 
+href="http://www.pctools.com/uk/guides/scripting/detail/139/">English 
+(UK)</A>&nbsp;&nbsp;&nbsp;<A style="COLOR: #ffffff" 
+href="http://www.pctools.com/de/guides/scripting/detail/139/">Deutsch</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/es/guides/scripting/detail/139/">Español</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/fr/guides/scripting/detail/139/">Français</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/it/guides/scripting/detail/139/">Italiano</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/nl/guides/scripting/detail/139/">Nederlands</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/ru/guides/scripting/detail/139/">Русский</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/br/guides/scripting/detail/139/">Português do 
+Brasil</A>&nbsp;&nbsp;&nbsp;<A style="COLOR: #ffffff" 
+href="http://www.pctools.com/jp/guides/scripting/detail/139/">日本語</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/kr/guides/scripting/detail/139/">한국어</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/cz/guides/scripting/detail/139/">Čeština</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/dk/guides/scripting/detail/139/">Dansk</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/fi/guides/scripting/detail/139/">Suomi</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/no/guides/scripting/detail/139/">Norsk</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/tr/guides/scripting/detail/139/">Türkçe</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/se/guides/scripting/detail/139/">Svenska</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/gr/guides/scripting/detail/139/">Ελληνικά</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/pt/guides/scripting/detail/139/">Português</A>&nbsp;&nbsp;&nbsp;<A 
+style="COLOR: #ffffff" 
+href="http://www.pctools.com/th/guides/scripting/detail/139/">ไทย</A>&nbsp;&nbsp;&nbsp; 
+</CENTER></NOSCRIPT>
+<DIV style="DISPLAY: none"></DIV>
+<SCRIPT 
+src="SpecialFolders Property at Scripting Guide for Windows_arquivos/uniqueid.php" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT type=text/javascript>
+var language = 'en';
+var requester = new Array;
+requester[0] = new ajaxObject();
+requester[0].update('/authenticate/auth.php?v=myaccount');
+requester[0].callback = function() { setMyaccountStatus(); }
+if((navigator.userAgent.indexOf('Mac')>-1) && (window.location.toString().indexOf('antivirus')!=-1) && language == 'en' && document.getElementById('iav_offer')) {
+	requester[2] = new ajaxObject();
+	requester[2].update('/authenticate/auth.php?v=getiav');
+	requester[2].callback = function() { ShowIAV();}
+}
+</SCRIPT>
+
+<DIV id=download_tracking></DIV><!-- Page generated at 2009-01-16 22:30:37 GMT --></BODY></HTML>
